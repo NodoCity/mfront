@@ -1,16 +1,28 @@
 import { Menu } from 'antd';
-import { HomeOutlined, AppstoreOutlined, AreaChartOutlined, PayCircleOutlined, SettingOutlined, BarsOutlined } from '@ant-design/icons';
+import * as A from '@ant-design/icons';
 
 const MenuList = ({darkTheme}) => {
     return (
         <Menu theme={darkTheme? 'dark':'light'} mode='inline' className="menu-bar">
-            <Menu.Item key="home" icon={<HomeOutlined />} >
-                Home
+            
+            <Menu.SubMenu key="avanzados" icon={<A.DeploymentUnitOutlined className="icon-size"/>} title="Avanzados" >
+                <Menu.Item key="funcion"icon={<A.FunctionOutlined className="icon-size"/>} >Función</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+                <Menu.Item key="task-2" icon={<A.CalendarOutlined className="icon-size"/>}>Funcion de fecha</Menu.Item>
+            </Menu.SubMenu>
+            <Menu.Item key="basicos" icon={<A.ProductOutlined  className="icon-size"/>} >
+                Básicos
             </Menu.Item>
-            <Menu.Item key="activity" icon={<AppstoreOutlined />} >
-                Activity
-            </Menu.Item>
-            <Menu.SubMenu key="tasks" icon={<BarsOutlined/>} title="Tasks" >
+            <Menu.SubMenu key="Excel" icon={<A.TableOutlined className="icon-size" twoToneColor="#52c41a"/>} title="Excel" >
                 <Menu.Item key="task-1" >Tasks 1</Menu.Item>
                 <Menu.Item key="task-2" >Tasks 2</Menu.Item>
                 <Menu.SubMenu key="subtasks" title="subTasks" >
@@ -18,14 +30,14 @@ const MenuList = ({darkTheme}) => {
                 <Menu.Item key="subtask-2" >SubTasks 2</Menu.Item>
                 </Menu.SubMenu>
             </Menu.SubMenu>
-            <Menu.Item key="progress" icon={<AreaChartOutlined />} >
-                Progress
+            <Menu.Item key="progress" icon={<A.InboxOutlined  className="icon-size"/>} >
+                Email
             </Menu.Item>
-            <Menu.Item key="payment" icon={<PayCircleOutlined />} >
-                Payment
+            <Menu.Item key="payment" icon={<A.FileOutlined className="icon-size"/>} >
+                Archivos
             </Menu.Item>
-            <Menu.Item key="setting" icon={<SettingOutlined />} >
-                Setting
+            <Menu.Item key="setting" icon={<A.ChromeOutlined className="icon-size" />} >
+                navegador
             </Menu.Item>
         </Menu>
     );

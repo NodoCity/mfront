@@ -17,7 +17,7 @@ const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(true);
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
@@ -48,14 +48,18 @@ function App() {
         <ToggleThemeButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
-          <Button
+        <Header style={{ padding: 0, background: darkTheme ? '#001529' : '#fff' }}>
+        <Button
             type='text'
             className='toggle'
             onClick={() => setCollapsed(!collapsed)}
             setCollapsed
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          />
+            icon={
+                  collapsed ? (
+                  <MenuUnfoldOutlined style={{ color: darkTheme ? 'white' : 'black' }} />
+                    ) : (
+                   <MenuFoldOutlined style={{ color: darkTheme ? 'white' : 'black' }} />)}/>
+
         </Header>
         <div style={{ width: '100%', height: 'calc(100vh - 64px)' }}>
           <ReactFlow
@@ -70,7 +74,7 @@ function App() {
               style={{ width: 150, height: 100, position: 'absolute', right: 10, top: 10, borderRadius: 5, boxShadow: '0 0 10px rgba(0,0,0,0.3)' }}
             />
             <Background
-              style={{ backgroundColor: '#222', padding: 20, borderRadius: 5, boxShadow: '0 0 10px rgba(0,0,0,0.3)', position: 'absolute', bottom: 10, right: 10 }}
+              style={{ backgroundColor: darkTheme ? '#222' : '#F0F8FF', padding: 20, borderRadius: 5, boxShadow: '0 0 10px rgba(0,0,0,0.3)', position: 'absolute', bottom: 10, right: 10 }}
             />
           </ReactFlow>
         </div>

@@ -37,6 +37,7 @@ font-family: 'Poppins', sans-serif;
     gap: 15px;
     font-size: 1rem;
     position: relative;
+    overflow-y: auto;
 
 }
 .toggle-theme-btn{
@@ -51,3 +52,9 @@ font-family: 'Poppins', sans-serif;
 .toggle{
     margin-left: 15px;
 }
+.icon-size {
+    font-size: 25px !important; /* Ajusta el tamaño según tu preferencia */
+  }
+
+  
+  

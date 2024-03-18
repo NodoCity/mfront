@@ -10,6 +10,7 @@ font-family: 'Poppins', sans-serif;
 }
 .sidebar{
     color: #fff;
+  
 }
 .logo{
     display: flex;
@@ -20,26 +21,74 @@ font-family: 'Poppins', sans-serif;
 
 }
 .logo-icon{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     border-radius: 50%;
-    background: rgba(28, 17,41,0.88 );
+    background: rgba(255, 153, 0, 0.88);
 }
 .menu-bar {
-    height: 88vh;
+    height: 88vh; /* Altura predeterminada del menú */
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    font-size: 1rem;
+    gap: 5px; /* Espacio entre los elementos del menú */
+    font-size: 0.9rem; /* Tamaño de la fuente */
+    line-height: 1; /* Reducir el espacio vertical entre líneas */
     position: relative;
     overflow-y: auto;
-
 }
+  /* Media query para pantallas pequeñas (2) */
+  @media screen and (max-width: 480px) {
+    .menu-bar {
+        height: 10vh; /* Altura del menú para pantallas pequeñas */
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .menu-bar {
+      height: 5vh; /* Altura del menú para pantallas muy pequeñas */
+    }
+  }
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .menu-bar {
+        height: 52vh; /* Altura del menú para pantallas pequeñas */
+    }
+  }
+  
+
+/* Media query para pantallas medianas */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .menu-bar {
+        height: 80vh; /* Altura del menú para pantallas medianas */
+    }
+}
+
+/* Media query para pantallas grandes */
+@media screen and (min-width: 1025px) {
+    .menu-bar {
+        height: 83vh; /* Altura del menú para pantallas grandes */
+    }
+}
+
+
+
+
+.menu-bar .ant-menu-item, .menu-bar .ant-menu-submenu-title {
+    white-space: normal; /* Permite que el texto se divida en múltiples líneas */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan en múltiples líneas */
+    line-height: normal; /* Elimina el espacio entre líneas para el texto dividido en múltiples líneas */
+}
+
+
+
+/* Ocultar barra de desplazamiento en navegadores WebKit */
+.menu-bar::-webkit-scrollbar {
+    width: 0;
+}
+
 .toggle-theme-btn{
     position: absolute;
     bottom: 30px;
@@ -56,5 +105,24 @@ font-family: 'Poppins', sans-serif;
     font-size: 25px !important; /* Ajusta el tamaño según tu preferencia */
   }
 
-  
+  .submenu-advanced {
+    color: red !important; /* Asigna un color azul al submenú "Avanzados" */
+  }
+  .submenu-basicos {
+    color: rgb(0, 255, 234) !important; /* Asigna un color azul al submenú "Avanzados" */
+  }
+
+  .submenu-excel {
+    color: rgb(0, 255, 0) !important; /* Asigna un color azul al submenú "Avanzados" */
+  }
+  .submenu-correo {
+    color: rgb(186, 189, 9) !important; /* Asigna un color azul al submenú "Avanzados" */
+  }
+  .submenu-archivos {
+    color: rgb(189, 9, 135) !important; /* Asigna un color azul al submenú "Avanzados" */
+  }
+  .submenu-navegador {
+    color: orange !important; /* Asigna un color azul al submenú "Avanzados" */
+  }
+
   

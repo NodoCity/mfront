@@ -71,10 +71,10 @@ function App() {
           >
             <Controls />
             <MiniMap
-              style={{ width: 150, height: 100, position: 'absolute', right: 10, top: 10, borderRadius: 5, boxShadow: '0 0 10px rgba(0,0,0,0.3)' }}
+              style={{ width: 150, height: 100, position: 'absolute', right: 10, top: 10,  boxShadow: '0 0 10px rgba(0,0,0,0.3)' }}
             />
             <Background
-              style={{ backgroundColor: darkTheme ? '#222' : '#F0F8FF', padding: 20, borderRadius: 5, boxShadow: '0 0 10px rgba(0,0,0,0.3)', position: 'absolute', bottom: 10, right: 10 }}
+              style={{ backgroundColor: darkTheme ? '#222' : '#F0F8FF', padding: 20,  boxShadow: '0 0 10px rgba(0,0,0,0.3)', position: 'absolute', bottom: 10, right: 10 }}
             />
           </ReactFlow>
         </div>
